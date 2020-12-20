@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Let e Const</title>
+</head>
+<body>
+
+<h1>Let e Const</h1>
+
+<pre>
+    ```JS
+    // const e let são locais e só funcionam no escopo onde foi criada
+
+    {
+        console.log('> existe y antes ?', y);
+        let y = 0    
+        console.log('> existe y depois ?', y);
+    }   
+    ```
+    </pre>
+
+<script>
+
+    {
+        // console.log('> existe y antes ?', y); //not work
+        let y = 0    
+        console.log('> existe y depois ?', y);
+    }   
+
+</script>
+    
+</body>
+</html>
+
+
