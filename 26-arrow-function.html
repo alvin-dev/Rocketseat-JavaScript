@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+
+<h1>Declarações de funções hoisting</h1>
+
+<p>Declarações de funções em JavaScript são hoisted à definição da função. Você pode usar uma função antes de tê-la declarado:</p>
+
+<pre>   
+    <code>
+    hoisted(); // logs "foo"
+    
+        function hoisted() {
+            console.log("foo");
+        }
+    
+    </code>
+</pre> 
+    
+    <p>Note que <code>function expressions</code> não são hoisted:</p>
+    
+<pre>
+    <code>
+    notHoisted(); // TypeError: notHoisted is not a function
+    
+    var notHoisted = function() {
+       console.log("bar");
+    };
+    </code>
+</pre>
+
+<script>
+
+// arrow function
+// jeito mais moderno e compacto
+
+// ao inves de escrever - function - apenas bote as aspas (), apos o simbolo arrow => e opos as chaves {} 
+
+const sayMyName = () => {
+    console.log('Alvaro');
+}
+
+sayMyName()
+
+// ou assim
+
+// const sayMyName = (name) => {
+//     console.log(name);
+// }
+
+// sayMyName('Alvaro')
+
+</script>
+</body>
+</html>
+
+
