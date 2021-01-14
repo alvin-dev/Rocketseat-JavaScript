@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções construtoras</title>
+</head>
+<body>
+<script>
+
+/*
+    Function() constructor
+     * expressão new
+     * criar um novo objeto
+     * this keyword
+*/
+
+function Person(name) {
+    // *this* ira referenciar o alvaro que esta fora da função
+    this.name = name
+    this.walk = function() {
+        return this.name + " está andando"
+    }
+}
+
+const alvaro = new Person('Alvaro') //a expressão *new* transforma a função *Person()* em uma função construtora tornando ela um objeto da *const alvaro*
+const joao = new Person('João') 
+
+
+console.log(alvaro.walk()) // vai retornar um objeto 
+console.log(joao.walk())
+
+// outros tipos 
+let Nome = new String('Alvaro')
+console.log(Nome);
+
+let Data = new Date('2020-01-14')
+console.log(Data);
+
+</script>
+</body>
+</html>
+
+
