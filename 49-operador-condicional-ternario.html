@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador condicional ternário</title>
+</head>
+<body>
+<script>
+
+// Operador Condicional (Ternário)
+    
+// Dependendo da condição, nós receberemos valores diferentes
+
+// Condição então valor 1 se não valor 2
+// condition ? value1 : value2
+
+// Exemplos
+// Café da manhã top
+let queijo = false
+let presunto = false
+
+// const mixtoQuente = queijo && presunto ? 'Mixto pronto :)' : 'Misto incompleto :('
+const mixtoQuente = queijo || presunto ? 'Mixto pronto :)' : 'Misto incompleto :('
+
+console.log(mixtoQuente);
+
+// Maior de 18
+
+let age = 10
+
+const maiorDezoito = age >= 18 ? `Tem ${age} = Aprovado !` : `Tem ${age} = Reprovado!`
+
+console.log(maiorDezoito);
+
+
+</script>
+</body>
+</html>
