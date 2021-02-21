@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If e Else</title>
+</head>
+<body>
+<script>
+
+// if...else
+
+// let temperature = 36.5
+
+
+// if(temperature >= 37){
+//     console.log("está com febre");
+// } else {
+//     console.log('está saldavel');
+// }
+
+// let temperature = 35
+
+// if(temperature >= 37.5){
+//     console.log("está com febre alta");
+// } else if (temperature < 37.5 && temperature >= 37) {
+//     console.log("está com febre moderada");
+// } else {
+//     console.log("está saudável");
+// }
+
+let temperature = 38
+let highTemperature = temperature >= 37.5
+let mediumTemperature = temperature < 37.5 && temperature >= 37
+
+if(highTemperature){
+    console.log("está com febre alta");
+} else if (mediumTemperature) {
+    console.log("está com febre moderada");
+} else {
+    console.log("está saudável");
+}
+
+</script>
+</body>
+</html>
