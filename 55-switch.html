@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+<script>
+
+// Switch
+
+// let expression = 'b'
+
+// switch (expression){
+//     case 'a':
+//         // codige
+//         console.log('a');
+//         break
+//     case 'b':
+//         // codigo para expression b
+//         console.log('b');
+//     default:
+//         console.log('default');
+//         break
+// }
+
+// let expression = 'a'
+
+// // sem o break ele vai pegar todas as espressoes 
+// switch (expression){
+//     case 'a':
+//         // codige
+//         console.log('a');
+//     case 'b':
+//         // codigo para expression b
+//         console.log('b');
+//         break
+//     default:
+//         console.log('default');
+//         break
+// }
+
+function calculate (number1, operator, number2){
+    
+    let result = 0;
+
+    switch (operator){
+        case '+':
+            result = number1 + number2
+            break
+        case '-':
+            result = number1 - number2
+            break
+        case '*':
+            result = number1 * number2
+            break
+        case '/':
+            result = number1 / number2
+            break
+        default:
+            console.log('não implementado');
+            break
+    }
+
+    return result
+
+}
+
+console.log(calculate(4, '*', 5));
+
+
+
+</script>
+</body>
+</html>
