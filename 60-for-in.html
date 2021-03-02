@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For in</title>
+</head>
+<body>
+<script>
+
+// for...in
+
+// O laço for...in  interage sobre propriedades enumeradas de um objeto, na ordem original de inserção.  O laço pode ser executado para cada propriedade distinta do objeto.
+
+let person = {
+    name: 'Alvin',
+    age: 30,
+    weight: 77.6
+}
+
+for(let property in person){
+    console.log(property)
+}
+
+// for(let property in person){
+//     console.log(person.name)
+// }
+
+for(let property in person){
+    console.log(person[property])
+}
+
+</script>
+
+</body>
+</html>
