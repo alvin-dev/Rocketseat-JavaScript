@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de notas escolares</title>
+</head>
+<body>
+<script>
+
+/*  ### Transformar notas escolares 
+
+    Crie um algoritimo que transforme as notas do sistema numérico para sistema de notas em caracteres tipo A B C
+
+* de 90 para cima  -  A
+* entre 80 ~ 90    -  B
+* entre 70 ~ 79    -  C
+* entre 60 ~ 69    -  D
+* menor que 60     -  F
+
+*/
+
+let notas = 80
+
+function calcularNota(notas){
+    let notaA = notas >= 90 && notas <= 100
+    let notaB = notas >= 80 && notas < 90
+    let notaC = notas >=70 && notas < 80
+    let notaD = notas >= 60 && notas < 70
+    let notaF = notas < 60 && notas >= 0
+
+    let notaFinal;
+
+    if (notaA){
+        notaFinal = 'Nota A';
+    } else if(notaB){
+        notaFinal = 'Nota B';
+    } else if(notaC){
+        notaFinal = 'Nota C';
+    } else if(notaD){
+        notaFinal = 'Nota D';
+    }else if (notaF){
+        notaFinal = 'Nota F';
+    }else {
+        notaFinal = "Nota inválida!"
+    }
+
+    return notaFinal;
+}
+
+
+console.log(calcularNota(101))
+console.log(calcularNota(90))
+console.log(calcularNota(80))
+console.log(calcularNota(70))
+console.log(calcularNota(60))
+console.log(calcularNota(50))
+console.log(calcularNota(-1))
+
+</script>
+
+</body>
+</html>
