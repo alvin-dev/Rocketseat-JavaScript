@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo de caixa familiar</title>
+</head>
+<body>
+<script>
+
+/*  
+    ### Sistema de gastos familiares
+
+    Crie um objeto que possuira 2 propriedades, ambas do tipo array:
+
+    * receitas: []
+    * despesas: []
+    
+    Agora, crie uma função que irá calcular o total de receitas e despesas e irá mostrar uma mensagem se a família está com saldo positivo ou negativo, seguido do valor do saldo
+    
+*/
+
+let family = {
+    receitas: [1500, 1500, 1200],
+    despesas: [150.13, 150.50, 85, 300.65, 70]
+}
+
+
+function sum(array){
+    let somar = 0;
+
+    for (let valor of array){
+        somar += valor
+    }
+
+    return somar
+
+}
+
+
+function calculate(){
+    const calculoReceitas = sum(family.receitas)
+    const calculoDespesas = sum(family.despesas)
+    
+    const total = calculoReceitas - calculoDespesas
+
+    const itsOk = total >= 0
+
+    let text = "negativo"
+
+    if(itsOk){
+        text = "positivo"
+    }
+
+    console.log(`Seu saldo é ${text}: R$ ${total.toFixed(2)}`); //toFixed formata os numeros decimais em 2 casas decimais 
+}
+
+calculate()
+
+</script>
+
+</body>
+</html>
